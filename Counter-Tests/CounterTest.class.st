@@ -45,6 +45,16 @@ CounterTest >> testIncrement [
 ]
 
 { #category : 'tests' }
+CounterTest >> testIncrementBy [
+	| c |
+	c := Counter new.
+	c count: 10 ; incrementBy: 2.
+	self assert: c count equals: 12
+	
+	
+]
+
+{ #category : 'tests' }
 CounterTest >> testInitialize [
 	self assert: Counter new count equals: 0
 ]
