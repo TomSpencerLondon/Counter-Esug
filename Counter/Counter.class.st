@@ -30,6 +30,11 @@ Counter >> decrement [
 ]
 
 { #category : 'accessing' }
+Counter >> decrementBy: anInteger [ 
+	count := count - anInteger
+]
+
+{ #category : 'accessing' }
 Counter >> increment [
 	count := count + 1
 ]

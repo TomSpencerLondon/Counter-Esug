@@ -27,6 +27,16 @@ CounterTest >> testDecrement [
 ]
 
 { #category : 'tests' }
+CounterTest >> testDecrementBy [
+	| c |
+	c := Counter new.
+	c count: 4 ; decrementBy: 3.
+	self assert: c count equals: 1
+	
+	
+]
+
+{ #category : 'tests' }
 CounterTest >> testIncrement [
 	| c |
 	c := Counter new.
