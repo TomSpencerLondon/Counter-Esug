@@ -30,8 +30,8 @@ CounterTest >> testDecrement [
 CounterTest >> testDecrementBy [
 	| c |
 	c := Counter new.
-	c count: 4 ; decrementBy: 3.
-	self assert: c count equals: 1
+	c count: 10 ; decrementBy: 3.
+	self assert: c count equals: 7
 	
 	
 ]
