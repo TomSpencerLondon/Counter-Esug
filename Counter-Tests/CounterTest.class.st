@@ -6,6 +6,14 @@ Class {
 }
 
 { #category : 'tests' }
+CounterTest >> testAddAll [
+	| nums c|
+	nums := #(10 20 30).
+	c := Counter new addAll: nums.
+	self assert: c count equals: 60
+]
+
+{ #category : 'tests' }
 CounterTest >> testCountIsSetAndRead [
 	| c |
 	c := Counter new.

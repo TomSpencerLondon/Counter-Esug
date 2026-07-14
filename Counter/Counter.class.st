@@ -15,6 +15,11 @@ Class {
 }
 
 { #category : 'accessing' }
+Counter >> addAll: aCollection [ 
+	aCollection do: [ :each | self incrementBy: each ]
+]
+
+{ #category : 'accessing' }
 Counter >> count [
 	^ count
 ]
