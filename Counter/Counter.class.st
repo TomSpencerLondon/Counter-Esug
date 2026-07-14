@@ -15,8 +15,9 @@ Class {
 }
 
 { #category : 'accessing' }
-Counter >> addAll: aCollection [ 
-	aCollection do: [ :each | self incrementBy: each ]
+Counter >> addAll: aCollection [
+
+	self incrementBy: (aCollection inject: 0 into: [ :a :e | a + e]).
 ]
 
 { #category : 'accessing' }
