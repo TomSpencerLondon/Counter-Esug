@@ -13,3 +13,8 @@ TallyBoardTest >> testBumpingCountsByName [
 	self assert: (b countFor: 'a') equals: 2.
 	self assert: (b countFor: 'b') equals: 1
 ]
+
+{ #category : 'tests' }
+TallyBoardTest >> testUnknownNameIsZero [
+	self assert: (TallyBoard new countFor: 'ghost') equals: 0
+]

@@ -15,7 +15,7 @@ TallyBoard >> bump: aName [
 
 { #category : 'collecting leaves' }
 TallyBoard >> countFor: aName [ 
-	^ (counters at: aName) count
+	^ (counters at: aName ifAbsent: [ Counter new ]) count
 ]
 
 { #category : 'initialization' }
