@@ -43,6 +43,11 @@ TallyBoard >> bump: aName [
 ]
 
 { #category : 'collecting leaves' }
+TallyBoard >> busiest [
+	^ counters keys detectMax: [ :name | (counters at: name) count ]
+]
+
+{ #category : 'collecting leaves' }
 TallyBoard >> countFor: aName [ 
 	^ (counters at: aName ifAbsent: [ Counter new ]) count
 ]

@@ -15,6 +15,14 @@ TallyBoardTest >> testBumpingCountsByName [
 ]
 
 { #category : 'tests' }
+TallyBoardTest >> testBusiestForNameOfCounterWithHighestCount [
+	| b |
+	b := TallyBoard new.
+	b bump: 'a'; bump: 'a'; bump: 'b'.
+	self assert: (b busiest) equals: 'a'
+]
+
+{ #category : 'tests' }
 TallyBoardTest >> testNamesAbove3 [
 	| b |
 	b := TallyBoard new.
