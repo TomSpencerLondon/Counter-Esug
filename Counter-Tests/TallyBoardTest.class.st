@@ -23,6 +23,13 @@ TallyBoardTest >> testBusiestForNameOfCounterWithHighestCount [
 ]
 
 { #category : 'tests' }
+TallyBoardTest >> testBusiestOnEmptyTallyBoardRaisesError [
+	| b |
+	b := TallyBoard new.
+	self should: [b busiest] raise: Error
+]
+
+{ #category : 'tests' }
 TallyBoardTest >> testBusiestTieReturnsFirstAlphabetically [
 	| b |
 	b := TallyBoard new.
