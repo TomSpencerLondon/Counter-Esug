@@ -44,7 +44,7 @@ TallyBoard >> bump: aName [
 
 { #category : 'collecting leaves' }
 TallyBoard >> busiest [
-	^ counters keys detectMax: [ :name | (counters at: name) count ]
+	^ counters keys asSortedCollection detectMax: [ :name | (counters at: name) count ]
 ]
 
 { #category : 'collecting leaves' }

@@ -23,6 +23,14 @@ TallyBoardTest >> testBusiestForNameOfCounterWithHighestCount [
 ]
 
 { #category : 'tests' }
+TallyBoardTest >> testBusiestTieReturnsFirstAlphabetically [
+	| b |
+	b := TallyBoard new.
+	b bump: 'b'; bump: 'b'; bump: 'a'; bump: 'a'; bump: 'c'.
+	self assert: (b busiest) equals: 'a'
+]
+
+{ #category : 'tests' }
 TallyBoardTest >> testNamesAbove3 [
 	| b |
 	b := TallyBoard new.
